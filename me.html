@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Account Opening Form</title>
+    <style>
+        body {
+            font-family: "century gothic", sans-serif;
+            background-color: #f3f3f3;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ccc; /* Gray background */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .address-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            transition: border-color 0.3s; /* Smooth transition */
+        }
+          h2 {
+            border: 2px solid lightgray; /* Use light gray as the border color */
+            border-style: style; /* Add this property to specify the border style */
+            padding: 5px;
+            display: inline-block;
+            width: 100%;
+        
+        
+        }
+        input[type="checkbox"] {
+            margin-top: 5px;
+        }
+        button {
+            background-color: #5a5a5a;
+            color: #161515;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .checkbox-label {
+    display: inline;
+    align-items: center;
+}
+
+label, input[type="radio"] {
+    display: inline;
+  }
+
+.checkbox-label input {
+    margin-left: 5px; /* Adjust the margin as needed for spacing */
+}
+.section-heading {
+    margin-bottom: 5px; /* Adjust the margin as needed */
+}
+header {
+    background-color: #5a5a5a;; /* Set your desired background color */
+    padding: 20px;
+    text-align: center;
+    top: 0;
+    z-index: 100;
+ }
+.logo{
+    width: 200px;
+    height: auto;
+}
+
+.label {
+    margin-top: 1; /* Remove the margin */
+    font-size: 20px;
+}
+
+
+
+
+        button:hover {
+            background-color: #f3f3f3;
+        }
+        
+        
+    </style>
+       <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const h1 = document.querySelector("h1");
+            const colors = ["red", "green", "blue", "orange", "purple", "teal", "magenta"];
+            let currentColorIndex = 0;
+
+            h1.addEventListener("click", function () {
+                h1.style.color = colors[currentColorIndex];
+                currentColorIndex = (currentColorIndex + 1) % colors.length;
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="C:\Users\hp\.vscode\.vscode\Page AML Logo Black without the asset management - Copy-PhotoRoom.png" alt="">
+    </header>
+    <h1>Bank Account Opening Form</h1>
+    <form action="process_account.php" method="post">
+         <h2>PERSONAL DETAILS:</h2>
+        <label for="full_name">Full Name (Surname First):</label>
+        <input type="text" id="full_name" name="full_name" required>
+
+          <!-- Additional Field for Joint Individuals -->
+          <label for="joint_full_name">Full Name of Joint Individuals:</label>
+          <input type="text" id="joint_full_name" name="joint_full_name" placeholder="Joint Account Holder's Name">
+          
+          <label for="Nature_of_Business">Nature Of Business:</label>
+          <input type="text" id="Nature_of_Business" name="Nature_of_Business">
+
+          <label for="mother's_ maiden_name">Mother's Maiden Name:</label>
+          <input type="text" id="mother's_maiden_name" name="mother's_maiden_name">
+
+
+         <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+   <label for="residential_corporate_address">Residential Address:</label>
+        <textarea id="residential_corporate_address" name="residential_corporate_address" rows="4" required class="address-input" placeholder="123 Main Street, City, Country"></textarea>
+
+     <label for="us_correspondence_address">US Correspondence Address:</label>
+        <textarea id="us_correspondence_address" name="us_correspondence_address" rows="4" required class="address-input" placeholder="US Correspondence Address"></textarea>
+
+        <label for="country">Country of Origin:</label>
+        <select id="country" name="country" required>
+            <option value="" disabled selected>Select your country</option>
+            <option value="AF">Afghanistan</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="AS">American Samoa</option>
+<option value="AD">Andorra</option>
+<option value="AG">Angola</option>
+<option value="AI">Anguilla</option>
+<option value="AG">Antigua &amp; Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AA">Armenia</option>
+<option value="AW">Aruba</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BS">Bahamas</option>
+<option value="BH">Bahrain</option>
+<option value="BD">Bangladesh</option>
+<option value="BB">Barbados</option>
+<option value="BY">Belarus</option>
+<option value="BE">Belgium</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BM">Bermuda</option>
+<option value="BT">Bhutan</option>
+<option value="BO">Bolivia</option>
+<option value="BL">Bonaire</option>
+<option value="BA">Bosnia &amp; Herzegovina</option>
+<option value="BW">Botswana</option>
+<option value="BR">Brazil</option>
+<option value="BC">British Indian Ocean Ter</option>
+<option value="BN">Brunei</option>
+<option value="BG">Bulgaria</option>
+<option value="BF">Burkina Faso</option>
+<option value="BI">Burundi</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="IC">Canary Islands</option>
+<option value="CV">Cape Verde</option>
+<option value="KY">Cayman Islands</option>
+<option value="CF">Central African Republic</option>
+<option value="TD">Chad</option>
+<option value="CD">Channel Islands</option>
+<option value="CL">Chile</option>
+<option value="CN">China</option>
+<option value="CI">Christmas Island</option>
+<option value="CS">Cocos Island</option>
+<option value="CO">Colombia</option>
+<option value="CC">Comoros</option>
+<option value="CG">Congo</option>
+<option value="CK">Cook Islands</option>
+<option value="CR">Costa Rica</option>
+<option value="CT">Cote D'Ivoire</option>
+<option value="HR">Croatia</option>
+<option value="CU">Cuba</option>
+<option value="CB">Curacao</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Republic</option>
+<option value="DK">Denmark</option>
+<option value="DJ">Djibouti</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="TM">East Timor</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="EE">Estonia</option>
+<option value="ET">Ethiopia</option>
+<option value="FA">Falkland Islands</option>
+<option value="FO">Faroe Islands</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="GF">French Guiana</option>
+<option value="PF">French Polynesia</option>
+<option value="FS">French Southern Ter</option>
+<option value="GA">Gabon</option>
+<option value="GM">Gambia</option>
+<option value="GE">Georgia</option>
+<option value="DE">Germany</option>
+<option value="GH">Ghana</option>
+<option value="GI">Gibraltar</option>
+<option value="GB">Great Britain</option>
+<option value="GR">Greece</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GP">Guadeloupe</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GN">Guinea</option>
+<option value="GY">Guyana</option>
+<option value="HT">Haiti</option>
+<option value="HW">Hawaii</option>
+<option value="HN">Honduras</option>
+<option value="HK">Hong Kong</option>
+<option value="HU">Hungary</option>
+<option value="IS">Iceland</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IA">Iran</option>
+<option value="IQ">Iraq</option>
+<option value="IR">Ireland</option>
+<option value="IM">Isle of Man</option>
+<option value="IL">Israel</option>
+<option value="IT">Italy</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KI">Kiribati</option>
+<option value="NK">Korea North</option>
+<option value="KS">Korea South</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Laos</option>
+<option value="LV">Latvia</option>
+<option value="LB">Lebanon</option>
+<option value="LS">Lesotho</option>
+<option value="LR">Liberia</option>
+<option value="LY">Libya</option>
+<option value="LI">Liechtenstein</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MO">Macau</option>
+<option value="MK">Macedonia</option>
+<option value="MG">Madagascar</option>
+<option value="MY">Malaysia</option>
+<option value="MW">Malawi</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MT">Malta</option>
+<option value="MH">Marshall Islands</option>
+<option value="MQ">Martinique</option>
+<option value="MR">Mauritania</option>
+<option value="MU">Mauritius</option>
+<option value="ME">Mayotte</option>
+<option value="MX">Mexico</option>
+<option value="MI">Midway Islands</option>
+<option value="MD">Moldova</option>
+<option value="MC">Monaco</option>
+<option value="MN">Mongolia</option>
+<option value="MS">Montserrat</option>
+<option value="MA">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="MM">Myanmar</option>
+<option value="NA">Nambia</option>
+<option value="NU">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="AN">Netherland Antilles</option>
+<option value="NL">Netherlands (Holland, Europe)</option>
+<option value="NV">Nevis</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand</option>
+<option value="NI">Nicaragua</option>
+<option value="NE">Niger</option>
+<option value="NG">Nigeria</option>
+<option value="NW">Niue</option>
+<option value="NF">Norfolk Island</option>
+<option value="NO">Norway</option>
+<option value="OM">Oman</option>
+<option value="PK">Pakistan</option>
+<option value="PW">Palau Island</option>
+<option value="PS">Palestine</option>
+<option value="PA">Panama</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PO">Pitcairn Island</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="PR">Puerto Rico</option>
+<option value="QA">Qatar</option>
+<option value="ME">Republic of Montenegro</option>
+<option value="RS">Republic of Serbia</option>
+<option value="RE">Reunion</option>
+<option value="RO">Romania</option>
+<option value="RU">Russia</option>
+<option value="RW">Rwanda</option>
+<option value="NT">St Barthelemy</option>
+<option value="EU">St Eustatius</option>
+<option value="HE">St Helena</option>
+<option value="KN">St Kitts-Nevis</option>
+<option value="LC">St Lucia</option>
+<option value="MB">St Maarten</option>
+<option value="PM">St Pierre &amp; Miquelon</option>
+<option value="VC">St Vincent &amp; Grenadines</option>
+<option value="SP">Saipan</option>
+<option value="SO">Samoa</option>
+<option value="AS">Samoa American</option>
+<option value="SM">San Marino</option>
+<option value="ST">Sao Tome &amp; Principe</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="RS">Serbia</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SK">Slovakia</option>
+<option value="SI">Slovenia</option>
+<option value="SB">Solomon Islands</option>
+<option value="OI">Somalia</option>
+<option value="ZA">South Africa</option>
+<option value="ES">Spain</option>
+<option value="LK">Sri Lanka</option>
+<option value="SD">Sudan</option>
+<option value="SR">Suriname</option>
+<option value="SZ">Swaziland</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syria</option>
+<option value="TA">Tahiti</option>
+<option value="TW">Taiwan</option>
+<option value="TJ">Tajikistan</option>
+<option value="TZ">Tanzania</option>
+<option value="TH">Thailand</option>
+<option value="TG">Togo</option>
+<option value="TK">Tokelau</option>
+<option value="TO">Tonga</option>
+<option value="TT">Trinidad &amp; Tobago</option>
+<option value="TN">Tunisia</option>
+<option value="TR">Turkey</option>
+<option value="TU">Turkmenistan</option>
+<option value="TC">Turks &amp; Caicos Is</option>
+<option value="TV">Tuvalu</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="AE">United Arab Emirates</option>
+<option value="GB">United Kingdom</option>
+<option value="US">United States of America</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="VS">Vatican City State</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Vietnam</option>
+<option value="VB">Virgin Islands (Brit)</option>
+<option value="VA">Virgin Islands (USA)</option>
+<option value="WK">Wake Island</option>
+<option value="WF">Wallis &amp; Futana Is</option>
+<option value="YE">Yemen</option>
+<option value="ZR">Zaire</option>
+<option value="ZM">Zambia</option>
+<option value="ZW">Zimbabwe</option>
+</select>
+
+     <label for="place_of_residence">Place of Residence:</label>
+     <input type="text" id="place_of_residence" name="place_of_residence" required placeholder="City, Country">
+
+     <label for="dob">Date of Birth:</label>
+     <input type="date" id="dob" name="dob" required>
+
+     <label for="place_of_birth">Place of Birth:</label>
+     <input type="text" id="place_of_birth">
+
+     <label for="telephone">Telephone Number:</label>
+     <input type="tel" id="telephone" name="telephone" required placeholder="1234567890" pattern="[0-9]{10}">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name ="email" required>
+
+        <label for="corporate_website">Website:</label>
+        <input type="url" id="corporate_website" name="corporate_website" placeholder="https://www.example.com">
+
+
+        <label for="ssn">Tax Identification Number:</label>
+        <input type="number" id="ssn" name="ssn" required placeholder="123456789" pattern="\d{9}">
+
+        <label for="next_of_kin">Next of Kin:</label>
+        <input type="text" id="next_of_kin" name="next_of_kin" required placeholder="Next of Kin's Full Name">
+
+        <label for="next_of_kin_email">Next of Kin's Email Address:</label>
+        <input type="email" id="next_of_kin_email" name="next_of_kin_email" required placeholder="nextofkin@example.com">
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" id="phone_number" name="phone_number" required placeholder="(123) 456-7890" pattern="[0-9]{10}" title="Please enter a valid phone number with country code (+123 4567890) ">
+
+        <h2 class="section-heading">EMPLOYMENT DETAILS:</h2>
+
+        <label for="current_employer">Current Employer:</label>
+        <input type="text" id="current_employer" name="current_employer" required placeholder="Current Employer's Name">
+
+        <label for="employer_address">Employer's Address:</label>
+        <input type="text" id="employer_address" name="employer_address" required placeholder="Employer's Address">
+
+        <label for="official_email">Official Email Address:</label>
+        <input type="email" id="official_email" name="official_email" required placeholder="official@example.com">
+
+        <label for="official_phone_number">Official Phone Number:</label>
+        <input type="tel" id="official_phone_number" name="official_phone_number" required placeholder="(+1) 443-7765">
+
+        <h2 class="section-heading">POLITICAL QUESTIONNAIRE:</h2>
+
+        <label for="political_positions">Have you or any person related to you held any political positions in the past or present? (Yes/No)</label>
+        <select id="political_positions" name="political_positions" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="position_occupied">If Yes, What Position was Occupied?</label>
+        <input type="text" id="position_occupied" name="position_occupied" placeholder="Political Position">
+
+        <label for="period_of_position">Please specify Period of Position:</label>
+        <input type="text" id="period_of_position" name="period_of_position" placeholder="e.g., 2010-2015">
+
+        <h2 class="section-heading">SOCIAL MEDIA HANDLES:</h2>
+        <label for="facebook_handle">Facebook:</label>
+        <input type="text" id="facebook_handle" name="facebook_handle" placeholder="https://www.facebook.com/yourprofile">
+        <label for="twitter_handle">Twitter:</label>
+        <input type="text" id="twitter_handle" name="twitter_handle" placeholder="https://twitter.com/yourhandle">
+        <label for="instagram_handle">Instagram:</label>
+        <input type="text" id="instagram_handle" name="instagram_handle" placeholder="https://www.instagram.com/yourusername">
+        <label for="linkedin_handle">LinkedIn:</label>
+        <input type="text" id="linkedin_handle" name="linkedin_handle" placeholder="https://www.linkedin.com/in/yourname">
+
+        <h2 class="section-heading">INVESTMENT DETAILS:</h2>
+
+        <label for="source_of_funds">Source of Funds:</label>
+        <input type="text" id="source_of_funds" name="source_of_funds" required placeholder="Source of Funds">
+
+        <label for="source_of_wealth">Source of Wealth:</label>
+        <input type="text" id="source_of_wealth" name="source_of_wealth" required placeholder="Source of Wealth">
+
+        <label for="purpose_of_investment">Purpose of Investment:</label>
+        <input type="text" id="purpose_of_investment" name="purpose_of_investment" required placeholder="Purpose of Investment">
+
+        <label for="investment_amount">Investment Amount (in Figures):</label>
+        <input type="number" id="investment_amount" name="investment_amount" required placeholder="1000">
+
+        <label for="investment_amount_words">Investment Amount (in Words):</label>
+        <input type="text" id="investment_amount_words" name="investment_amount_words" required placeholder="One thousand dollars">
+
+        <label for="tenor">Tenor:</label>
+        <input type="text" id="tenor" name="tenor" required placeholder="Investment Tenor">
+
+        <label for="interest_rate">Interest Rate:</label>
+        <input type="number" id="interest_rate" name="interest_rate" required placeholder="5.0">
+
+        <h2 class="section-heading">ACCOUNT DETAILS:</h2>
+            <p>Kindly provide your account details, for interest payments and/or liquidation of investment:</p>
+
+            <label for="bank_name">Name of Bank:</label>
+            <input type="text" id="bank_name" name="bank_name" required placeholder="Bank Name">
+
+            <label for="account_name">Account Name:</label>
+            <input type="text" id="account_name" name="account_name" required placeholder="Account Name">
+
+            <label for="account_number">Account Number:</label>
+            <input type="text" id="account_number" name="account_number" required placeholder="Account Number">
+
+            <label for="bvn">Bank Verification Number:</label>
+            <input type="text" id="bvn" name="bvn" required placeholder="BVN">
+
+            <label for="sort_code">Sort Code:</label>
+            <input type="text" id="sort_code" name="sort_code" required placeholder="Sort Code">
+
+            <h2 class="section-heading">DECLARATION:</h2>
+            <div class="checkbox-label">
+                <label for="declaration_check">I/We declare that I/We have read and agree to the following:</label>
+                 <input type="checkbox" id="declaration_check" name="declaration_check" required>
+            </div>
+        <ol>
+             <li>I/We am/are a legal entity; or I/We am/are 18 years or above.</li>
+             <li>The information given is correct to the best of my/our knowledge and belief, and I/We will inform the company of any change in the information given.</li>
+             <li>I/We have attached a bank draft/cheque/evidence of fund(s) transfer to the company with my/our name, address, daytime telephone number written at the back where required.</li>
+             <li>I/We have read, understood and are in agreement with the stated terms and conditions herein.</li>
+        </ol>
+        <p>I/We agree:</p>
+        <ol>
+            <li>To comply with the minimum holding period(s) of the investments, failing which I/We accept any loss, cost and charge that may arise as a result of my/our redemption.</li>
+        </ol>
+
+        <h2>Authorized Signatory</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="signature_upload">Signature:</label>
+        <input type="file" id="signature_upload" name="signature_upload" accept="image/*">
+
+         <label for="date">Date</label>
+         <input type="date" id="date" name="date" required>
+
+
+         <h2 class="section-heading">REQUIRED "KNOW YOUR CUSTOMER" DOCUMENTATION:</h2>
+         <p class="label"><b>Individual/Joint:</b></p>
+        
+         <ul class="documentation-list">
+            <li><label for="passport_photograph_of_individuals">Passport photograph(s) of individual(s)</label>
+                <input type="file" id="passport_photograph_of_individuals" name="passport_photograph_of_individuals" accept=".pdf, .jpg, .png" required></li>
+            <li><label for="a_copy_of_valid_iddentification">A copy of valid identification</label>
+                <input type="file" id="a_copy_of_valid_iddentification" name="a_copy_of_valid_iddentification" accept=".pdf, .jpg, .png" required></li>
+            <li><label for="utility_bill">A copy of recent utility bill, within the last three months</label>
+                <input type="file" id="utility_bill" name="utility_bill" accept=".pdf, .jpg, .png"></li>
+            <li><label for="birth_certificate">Birth Certificate of Minor </label>
+                <input type="file" id="birth_certificate" name="birth_certificate" accept=".pdf, .jpg, .png">
+        
+        </li>
+            </ul>
+
+        
+
+
+
+
+        <label for="agreement">I have read and agree to the bank's <a href="file:///C:/Users/Timi%20Akinola/Terms%20and%20Condition.html">terms and conditions:</a></label>
+        <input type="checkbox" id="agreement" name="agreement" required>
+
+        <button class="format" type="submit">Submit</button>
+    </form>
+</body>
+</html>
